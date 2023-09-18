@@ -387,6 +387,16 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "Cms.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Cms.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cms.Core.dll": {}
+        }
       }
     }
   },
@@ -980,10 +990,16 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Cms.Core/1.0.0": {
+      "type": "project",
+      "path": "../Cms.Core/Cms.Core.csproj",
+      "msbuildProject": "../Cms.Core/Cms.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Cms.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.11",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.11"
@@ -1017,7 +1033,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\clean-architecture\\Cms.Core\\Cms.Core.csproj": {
+              "projectPath": "G:\\clean-architecture\\Cms.Core\\Cms.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
